@@ -1,0 +1,86 @@
+.container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+/* container 안 header, nav, main 라인선 알기위한 border */
+.container > header,
+.container > nav,
+.container > main {
+  border: 1px solid black;
+}
+
+a {
+  text-decoration-line: none !important;
+}
+
+li > a {
+  color: #a29bfe;
+  display: inline-block;
+  border-radius: 20%;
+  padding: 0vw 1vw 0vw 1vw;
+  margin: 1vh 0vh 1vh 0vh;
+  /* margin-right: 2rem; */
+}
+
+ul {
+  list-style: none;
+  padding-left: 0%;
+}
+
+ul li {
+  float: left;
+  margin: 0rem 1rem 0rem 1rem;
+}
+
+li > a:hover {
+  color: white;
+  background-color: #a29bfe;
+}
+
+nav {
+  font-size: 4vw;
+  /* 반응형웹을 만들때는 단위를 vw, vh를 사용하는게 좋아보임 */
+}
+
+.container_2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5%;
+}
+
+/* 웹툰 내용들에 대한 라인선 */
+.webtoon {
+  border: 1px solid black;
+}
+
+.webtoon img {
+  width: 100%;
+}
+
+/* 웹툰내 콘텐츠 제목 폰트종류정하기 */
+.webtoon-title {
+  font-family: "Jua", sans-serif;
+  font-size: 3.5vw;
+}
+
+/* 웹툰내 웹툰콘텐츠 별점 폰트종류 */
+.score {
+  font-family: "Nanum Pen Script", cursive;
+  color: red;
+  font-size: 3vw;
+}
+
+.webtoon-author {
+  font-family: "Gowun Batang", serif;
+  color: #464444;
+  font-size: 3vw;
+}
+
+.up {
+  font-size: 3.5vw;
+  background-color: #3498db;
+  color: white;
+  border-radius: 25%;
+  padding: 0vw 1vw 0vw 1vw;
+}
