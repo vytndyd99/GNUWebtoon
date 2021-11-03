@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>경대웹툰</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./style/index.css" />
+    <!-- 부트스트랩 -->
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style/index.css?ver=1" />
+    <!-- css부분끝 -->
     <!-- 구글웹폰트 웹툰제목부분 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,104 +39,213 @@
       rel="stylesheet"
     />
     <!-- 구글웹폰트 작가부분 끝 -->
+    <!-- 구글웹폰트 월별,신작,완결 웹툰종류 폰트부분 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 구글웹폰트 월별, 신작, 완결 웹툰종류 폰트부분 끝 -->
   </head>
   <body>
     <div class="container">
-      <header>시작부분</header>
-      <nav>
-        <ul>
-          <li><a href="">월</a></li>
-          <li><a href="">화</a></li>
-          <li><a href="">수</a></li>
-          <li><a href="">목</a></li>
-          <li><a href="">금</a></li>
-          <li><a href="">토</a></li>
-          <li><a href="">일</a></li>
-          <li><a href="">신작</a></li>
-          <li><a href="">완결</a></li>
-        </ul>
+      <header>
+        <!-- 메뉴바부분 -->
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-justify"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </a>
+        <!-- 메뉴바부분완료 -->
+        <!-- 검색창기능부분 -->
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+            />
+          </svg>
+        </a>
+        <!-- 검색창부분완료 -->
+        <!-- 편지함부분 -->
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-envelope"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"
+            />
+          </svg>
+        </a>
+        <!-- 편지함부분완료 -->
+        <br />
+        <!-- 메인함수번호들 -->
+        <div class="sequenceNumbers">
+          <a href="#" class="sequenceNumber" onclick="sequence1()">1</a>
+          <a href="#" class="sequenceNumber" onclick="sequence2()">2</a>
+          <a href="#" class="sequenceNumber" onclick="sequence3()">3</a>
+          <a href="#" class="sequenceNumber" onclick="sequence4()">4</a>
+          <a href="#" class="sequenceNumber" onclick="sequence5()">5</a>
+          <a href="#" class="sequenceNumber" onclick="sequence6()">6</a>
+          <a href="#" class="sequenceNumber" onclick="sequence7()">7</a>
+          <a href="#" class="sequenceNumber" onclick="sequence8()">8</a>
+        </div>
+        <!-- 클릭시 웹툰사진변경 -->
+      </header>
+      <nav class="container_3">
+        <!-- 요일, 신작, 완결별 웹툰 정리 -->
+        <span><a href="#">월</a></span>
+        <span><a href="#">화</a></span>
+        <span><a href="#">수</a></span>
+        <span><a href="#">목</a></span>
+        <span><a href="#">금</a></span>
+        <span><a href="#">토</a></span>
+        <span><a href="#">일</a></span>
+        <span><a href="#">신작</a></span>
+        <span><a href="#">완결</a></span>
       </nav>
+      <!-- container2부분 grid를 사용하여 배치 -->
       <main class="container_2">
         <div class="webtoon">
-          <a href=""><img src="./style/thumbnail1.jpg" alt="" /></a>
-          <p class="webtoon-title">난 개구리가 아니야!!</p>
-          <p class="score">별점 10.0</p>
-          <span class="webtoon-author">넌개구리</span>
+          <a href=""
+            ><img
+              src="./style/MondayWebtoonImages/참교육.jpg"
+              alt=""
+              class="webtoonImage"
+          /></a>
+          <!-- 웹툰제목 -->
+          <p class="webtoon-title">참교육</p>
+          <!-- 별점 -->
+          <p class="score">별점 9.92</p>
+          <!-- 작가 -->
+          <span class="webtoon-author">채용택 / 한가람</span>
+          <!-- 인기작품 -->
           <span class="up">up</span>
         </div>
         <div class="webtoon">
-          <a href=""><img src="./style/thumbnail1.jpg" alt="" /></a>
-          <p class="webtoon-title">포근포근</p>
-          <p class="score">별점 9.8</p>
-          <span class="webtoon-author">누렁이</span>
+          <a href=""
+            ><img src="./style/MondayWebtoonImages/신의탑.jpg" alt=""
+          /></a>
+          <p class="webtoon-title">신의 탑</p>
+          <p class="score">별점 8.77</p>
+          <span class="webtoon-author">SIU</span>
         </div>
         <div class="webtoon">
-          <a href=""><img src="./style/thumbnail1.jpg" alt="" /></a>
-          <p class="webtoon-title">언제나 초코송이</p>
-          <p class="score">별점 9.7</p>
-          <span class="webtoon-author">얼초</span>
+          <a href=""
+            ><img src="./style/MondayWebtoonImages/뷰티풀군바리.jpg" alt=""
+          /></a>
+          <p class="webtoon-title">뷰티풀 군바리</p>
+          <p class="score">별점 9.56</p>
+          <span class="webtoon-author">설이 / 윤성원</span>
           <span class="up">up</span>
         </div>
         <div class="webtoon">
-          <a href=""><img src="./style/thumbnail1.jpg" alt="" /></a>
-          <p class="webtoon-title">개척:짧게 살고도 오래...</p>
-          <p class="score">별점 10.0</p>
-          <span class="webtoon-author">총장님</span>
+          <a href=""
+            ><img src="./style/MondayWebtoonImages/팔이피플.jpg" alt=""
+          /></a>
+          <p class="webtoon-title">팔이피플</p>
+          <p class="score">별점 9.91</p>
+          <span class="webtoon-author">매미 / 희세</span>
         </div>
         <div class="webtoon">
-          <a href=""><img src="./style/thumbnail1.jpg" alt="" /></a>
-          <p class="webtoon-title">누구보다빠르게!</p>
-          <p class="score">별점 10.0</p>
-          <span class="webtoon-author">리틀패럿</span>
+          <a href=""
+            ><img src="./style/MondayWebtoonImages/소녀의세계.jpg" alt=""
+          /></a>
+          <p class="webtoon-title">소녀의 세계</p>
+          <p class="score">별점 9.68</p>
+          <span class="webtoon-author">모랑지</span>
           <span class="up">up</span>
         </div>
         <div class="webtoon">
-          <a href=""><img src="./style/thumbnail1.jpg" alt="" /></a>
-          <p class="webtoon-title">누구보다느리게...</p>
-          <p class="score">별점 10.0</p>
-          <span class="webtoon-author">리틀터틀</span>
+          <a href=""
+            ><img src="./style/MondayWebtoonImages/백수세끼.jpg" alt=""
+          /></a>
+          <p class="webtoon-title">백수세끼</p>
+          <p class="score">별점 9.91</p>
+          <span class="webtoon-author">치즈</span>
         </div>
         <div class="webtoon">
-          <a href=""><img src="./style/thumbnail1.jpg" alt="" /></a>
-          <p class="webtoon-title">아침은괴로워~</p>
-          <p class="score">별점 9.9</p>
-          <span class="webtoon-author">제주 아침</span>
+          <a href=""
+            ><img
+              src="./style/MondayWebtoonImages/장씨세가 호위무가.jpg"
+              alt=""
+          /></a>
+          <p class="webtoon-title">장씨세가 호위무가</p>
+          <p class="score">별점 9.97</p>
+          <span class="webtoon-author">조형근 / 김인호</span>
         </div>
         <div class="webtoon">
-          <a href=""><img src="./style/thumbnail1.jpg" alt="" /></a>
-          <p class="webtoon-title">마음을드려요♡</p>
-          <p class="score">별 10.0</p>
-          <span class="webtoon-author">소소</span>
+          <a href=""
+            ><img src="./style/MondayWebtoonImages/앵무살수.jpg" alt=""
+          /></a>
+          <p class="webtoon-title">앵무살수</p>
+          <p class="score">별점 9.96</p>
+          <span class="webtoon-author">김성진</span>
         </div>
         <div class="webtoon">
-          <a href=""><img src="./style/thumbnail1.jpg" alt="" /></a>
-          <p class="webtoon-title">고독...</p>
-          <p class="score">별점 9.6</p>
-          <span class="webtoon-author">냥냥이</span>
+          <a href=""
+            ><img src="./style/MondayWebtoonImages/혁신적얼간이들.jpg" alt=""
+          /></a>
+          <p class="webtoon-title">혁신적 얼간이들</p>
+          <p class="score">별점 9.93</p>
+          <span class="webtoon-author">가스파드</span>
         </div>
         <div class="webtoon">
-          <a href=""><img src="./style/thumbnail1.jpg" alt="" /></a>
-          <p class="webtoon-title">난 개구리가 아니야!!!</p>
-          <p class="score">별점 10.0</p>
-          <span class="webtoon-author">넌개구리</span>
+          <a href=""
+            ><img src="./style/MondayWebtoonImages/파이게임.jpg" alt=""
+          /></a>
+          <p class="webtoon-title">파이게임</p>
+          <p class="score">별점 9.59</p>
+          <span class="webtoon-author">배진수</span>
           <span class="up">up</span>
         </div>
         <div class="webtoon">
-          <a href=""><img src="./style/thumbnail1.jpg" alt="" /></a>
-          <p class="webtoon-title">포근 포근</p>
-          <p class="score">별점 9.8</p>
-          <span class="webtoon-author">누렁이</span>
+          <a href=""
+            ><img src="./style/MondayWebtoonImages/만렙돌파.jpg" alt=""
+          /></a>
+          <p class="webtoon-title">만렙돌파</p>
+          <p class="score">별점 9.91</p>
+          <span class="webtoon-author">성불예정, 홍실 / 미노</span>
         </div>
         <div class="webtoon">
-          <a href=""><img src="./style/thumbnail1.jpg" alt="" /></a>
-          <p class="webtoon-title">언제나 초코송이</p>
-          <p class="score">별점 9.7</p>
-          <span class="webtoon-author">얼초</span>
+          <a href=""
+            ><img src="./style/MondayWebtoonImages/퀘스트지상주의.jpg" alt=""
+          /></a>
+          <p class="webtoon-title">퀘스트지상주의</p>
+          <p class="score">별점 8.93</p>
+          <span class="webtoon-author">박태준 만화회사</span>
           <span class="up">up</span>
         </div>
       </main>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

@@ -1,6 +1,12 @@
+
+
+/* 그리드를 사용하여 배치 */
 .container {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  /* 15:10:75비율로 배치 */
+  grid-template-rows: 20% 5% 75%;
+  /* 중앙정렬 */
+  justify-content: center;
 }
 
 /* container 안 header, nav, main 라인선 알기위한 border */
@@ -11,76 +17,121 @@
 }
 
 a {
+  /* a태그의 밑줄부분 삭제 */
   text-decoration-line: none !important;
 }
 
-li > a {
+span > a {
+  /* 요일, 신작, 완결별 웹툰 목록 꾸미기 */
   color: #a29bfe;
   display: inline-block;
   border-radius: 20%;
+  padding: 0vw 1.5vw 0vw 1.5vw;
+  margin: 1vh 0vh 1vh 0vh;
+  /* 반응형웹에 적합한 %, 뷰포트사용 */
+}
+
+.sequenceNumbers {
+  position: absolute;
+  bottom: 0;
+  /* 메인웹툰번호들이 있는 div 태그의 부모요소의 맨아래로 배치 현재부모요소 header */
+}
+
+.sequenceNumber {
+  /* 메인웹툰번호 꾸미기 */
+  color: white;
+  border-radius: 20%;
+  background-color: black;
   padding: 0vw 1vw 0vw 1vw;
   margin: 1vh 0vh 1vh 0vh;
-  /* margin-right: 2rem; */
+  font-size: 2.5vh;
 }
 
-ul {
-  list-style: none;
-  padding-left: 0%;
-}
-
-ul li {
-  float: left;
-  margin: 0rem 1rem 0rem 1rem;
-}
-
-li > a:hover {
+span > a:hover {
+  /* 링크에 마우스가 올라올시 효과 적용 */
   color: white;
   background-color: #a29bfe;
 }
 
-nav {
-  font-size: 4vw;
-  /* 반응형웹을 만들때는 단위를 vw, vh를 사용하는게 좋아보임 */
+/* 요일, 신작, 완결별 웹툰 종류를 flex로 지정후 옵션사용 */
+.container_3 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 3vw;
+  font-family: 'Jua', sans-serif;
+}
+
+/* 요일,신작,완결별 웹툰 수직 중앙정렬 */
+.container_3 > span {
+  align-self: center;
 }
 
 .container_2 {
+  /* 요일별, 신작, 완결별 웹툰들 모음을 그리드로 표현 */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1.5%;
+  /* 갭을줘서 가독성을 좋게 만듦 */
 }
 
 /* 웹툰 내용들에 대한 라인선 */
 .webtoon {
   border: 1px solid black;
+  position: relative;
 }
 
+/* 메인홈페이지의 웹툰이미지 크기 조절 */
 .webtoon img {
   width: 100%;
+  height: 50%;
 }
 
-/* 웹툰내 콘텐츠 제목 폰트종류정하기 */
+/* 웹툰내 콘텐츠 제목 폰트종류정의 */
 .webtoon-title {
   font-family: "Jua", sans-serif;
   font-size: 3.5vw;
 }
 
-/* 웹툰내 웹툰콘텐츠 별점 폰트종류 */
+/* 웹툰내 웹툰콘텐츠 별점 폰트정의 */
 .score {
   font-family: "Nanum Pen Script", cursive;
   color: red;
   font-size: 3vw;
 }
 
+/* 웹툰내 웹툰콘텐츠 작가 폰트정의 */
 .webtoon-author {
   font-family: "Gowun Batang", serif;
   color: #464444;
-  font-size: 3vw;
+  font-size: 2vw;
 }
 
+/* 웹툰내 인기웹툰인경우 up의 폰트정의 */
 .up {
   font-size: 3.5vw;
   background-color: #3498db;
   color: white;
   border-radius: 25%;
   padding: 0vw 1vw 0vw 1vw;
+  font-family: 'Jua', sans-serif;
+}
+
+/* webtoon-author, up 의 부모요소인 webtoon에 relative 속성을 주고, 자식요소에 absolute를 주어 webtoon요소의 바닥에 작가와 업 글자를 나타내도록 표현 */
+.webtoon-author {
+  position: absolute;
+  bottom: 0;
+}
+.up {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* 메인웹툰이미지를 header의 백그라운드 이미지로 저장 */
+/* 여기서 index.js에 있는 함수식을 통해 웹툰이미지가 변경가능 */
+header {
+  background-image: url(./Mainwebtoon/2021최애캐\ 안녕\,\ 잘\ 지내니.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
 }
