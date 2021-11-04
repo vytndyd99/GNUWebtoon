@@ -1,0 +1,136 @@
+/* body의 여백 없애기 */
+body {
+  margin: 0;
+  padding-top: 10%;
+}
+
+/* 헤더부분인 뒤로가기 버튼을 고정시킴 */
+.header {
+  background-color: #a29bfe;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.8;
+  z-index: 2;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+/* header,main,article {
+  border: 1px solid black;
+} */
+
+/* 메뉴버튼 꾸미기 */
+.backButton {
+  background-color: #a29bfe;
+  color: black;
+  padding: 1.5% 5%;
+  text-align: center;
+  font-size: 2vw;
+  font-family: "Jua", sans-serif;
+  border: 0;
+  outline: 0;
+}
+/* 메뉴버튼에 마우스를 올렸을시 효과 */
+.backButton:hover {
+  background-color: black;
+  color: white;
+}
+
+/* 웹툰 메인 이미지를 부모요소에 맞추기위해 삽입 */
+.mainWebtoonImage {
+  display: block;
+  float: left;
+  height: auto;
+  width: 30%;
+  padding-left: 3%;
+}
+
+.webtoonName,
+.webtoonAuthorDay,
+.webtoonScore {
+  font-family: "Jua", sans-serif;
+  font-size: 4vw;
+  padding-left: 3%;
+}
+
+.webtoonScore {
+  color: red;
+}
+
+.webtoonFirstStory {
+  background-color: #a29bfe;
+  color: black;
+  padding: 1.5% 5%;
+  text-align: center;
+  font-size: 2vw;
+  font-family: "Jua", sans-serif;
+  border: 0;
+  outline: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.webtoonFirstStory:hover {
+  background-color: black;
+  color: white;
+}
+/* 첫편부터보기를 우측 하단에 두기위해 부모요소 container포지션을 변경 */
+header > div {
+  position: relative;
+  height: 100%;
+}
+
+/* 웹툰화수 표현부분 */
+p {
+  display: block;
+  border-top: thick solid #dcdcdc;
+  font-size: 3vw;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: gray;
+  padding-left: 5%;
+  text-align: center;
+}
+
+/* 웹툰 요소에 마우스 over시 클릭버튼활성화 */
+article > div {
+  cursor: pointer;
+  border-bottom: thick solid #dcdcdc;
+}
+/* 웹툰 첫번째 요소에만 경계값 탑을 준다. */
+article > div:nth-child(1) {
+  border-top: thick solid #dcdcdc;
+}
+
+.webtoonImages {
+  display: block;
+  float: left;
+  height: auto;
+  width: 20vw;
+}
+
+.subWebtoonName {
+  font-family: "Jua", sans-serif;
+  font-size: 3vw;
+}
+
+.subDate {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 2.5vw;
+}
+
+.subScore {
+  font-family: "Jua", sans-serif;
+  font-size: 3vw;
+  color: red;
+}
+
+.subWebtoonName,
+.subDate,
+.subScore {
+  padding-left: 2%;
+}

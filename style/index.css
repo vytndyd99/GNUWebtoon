@@ -3,8 +3,8 @@
 /* 그리드를 사용하여 배치 */
 .container {
   display: grid;
-  /* 15:10:75비율로 배치 */
-  grid-template-rows: 20% 5% 75%;
+  /* 15:10:auto 비율로 배치 */
+  grid-template-rows: 20% 5% auto;
   /* 중앙정렬 */
   justify-content: center;
 }
@@ -14,6 +14,30 @@
 .container > nav,
 .container > main {
   border: 1px solid black;
+}
+
+/* 메뉴버튼 꾸미기 */
+.menuButton {
+  /* fixed를 이용하여 최상단 최좌측에 고정 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: 	#a29bfe;
+  color: black;
+  padding: 1.5% 5%;
+  text-align: center;
+  font-size: 2vw;
+  font-family: 'Jua', sans-serif;
+  /* z-index요소를 주어 가장 위쪽으로 보이도록 조정 */
+  z-index: 2; 
+  width: 15vw;
+  border: 0;
+  outline: 0;
+}
+/* 메뉴버튼에 마우스를 올렸을시 효과 */
+.menuButton:hover {
+  background-color: black;
+  color: white;
 }
 
 a {
@@ -45,6 +69,7 @@ span > a {
   padding: 0vw 1vw 0vw 1vw;
   margin: 1vh 0vh 1vh 0vh;
   font-size: 2.5vh;
+  opacity: 0.6;
 }
 
 span > a:hover {
@@ -70,8 +95,6 @@ span > a:hover {
   /* 요일별, 신작, 완결별 웹툰들 모음을 그리드로 표현 */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1.5%;
-  /* 갭을줘서 가독성을 좋게 만듦 */
 }
 
 /* 웹툰 내용들에 대한 라인선 */
