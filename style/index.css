@@ -9,6 +9,8 @@ body {
   grid-template-rows: 20% 5% auto;
   /* 중앙정렬 */
   justify-content: center;
+  /* margin-left: 10%;
+  margin-right: 10%; */
 }
 
 /* container 안 header, nav, main 라인선 알기위한 border */
@@ -114,6 +116,7 @@ span > a:hover {
 
 /* 웹툰내 콘텐츠 제목 폰트종류정의 */
 .webtoon-title {
+  margin-top: 0;
   font-family: "Jua", sans-serif;
   font-size: 3.5vw;
 }
