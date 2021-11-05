@@ -1,4 +1,5 @@
 /* body의 여백 없애기 */
+/* 패딩을 입혀 뒤로가기 요소부분을 웹툰과 간격을 띄움 */
 body {
   margin: 0;
   padding-top: 10%;
@@ -15,14 +16,19 @@ body {
   z-index: 2;
 }
 
+/* 컨테이너 요소가 중앙에 몰려있도록 보기편하게 조정 */
 .container {
   display: grid;
   grid-template-rows: auto;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-/* header,main,article {
-  border: 1px solid black;
-} */
+/* webtoonButtonBox의 부모요소인 container-2를 포지션조정을 하여 버튼이 우측하단에 고정되도록 조정 */
+.container-2 {
+    display: flex;
+    position: relative;
+}
 
 /* 메뉴버튼 꾸미기 */
 .backButton {
@@ -40,14 +46,18 @@ body {
   background-color: black;
   color: white;
 }
+.mainWebtoonImageBox {
+    width: 50%;
+}
 
-/* 웹툰 메인 이미지를 부모요소에 맞추기위해 삽입 */
 .mainWebtoonImage {
-  display: block;
-  float: left;
-  height: auto;
-  width: 30%;
-  padding-left: 3%;
+  height: 100%;
+  width: 100%;
+}
+
+.mainWebtoonExplanationBox > p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .webtoonName,
@@ -55,40 +65,50 @@ body {
 .webtoonScore {
   font-family: "Jua", sans-serif;
   font-size: 4vw;
-  padding-left: 3%;
+  padding-bottom: 10%;
+  padding-left: 5%;
 }
 
 .webtoonScore {
   color: red;
 }
 
+/* 첫편부터보기 버튼을 바닥으로 지정 */
+.webtoonButtonBox {
+    align-self: flex-end;
+    position: absolute;
+    right: 0;
+}
+
 .webtoonFirstStory {
   background-color: #a29bfe;
   color: black;
-  padding: 1.5% 5%;
+  padding: 5% 1.5%;
   text-align: center;
   font-size: 2vw;
   font-family: "Jua", sans-serif;
   border: 0;
   outline: 0;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  width: 15vw;
+  height: auto;
+  border: 1px solid black;
 }
 .webtoonFirstStory:hover {
   background-color: black;
   color: white;
 }
+
 /* 첫편부터보기를 우측 하단에 두기위해 부모요소 container포지션을 변경 */
-header > div {
+/* header > div {
   position: relative;
   height: 100%;
-}
+} */
 
 /* 웹툰화수 표현부분 */
-p {
-  display: block;
+main > div {
   border-top: thick solid #dcdcdc;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
   font-size: 3vw;
   font-family: "Open Sans Condensed", sans-serif;
   color: gray;
@@ -106,31 +126,39 @@ article > div:nth-child(1) {
   border-top: thick solid #dcdcdc;
 }
 
-.webtoonImages {
-  display: block;
-  float: left;
-  height: auto;
-  width: 20vw;
+/* 웹툰이미지 박스크기 조정 */
+.webtoonImageBox {
+  width: 100%;
+  height: 100%;
 }
 
+/* 웹툰이미지들 크기 조정 */
+.webtoonImages {
+  width: 15vw;
+  height: 100%;
+}
+
+/* 웹툰 글씨요소 조정 */
 .subWebtoonName {
   font-family: "Jua", sans-serif;
   font-size: 3vw;
 }
-
 .subDate {
   font-family: "Open Sans Condensed", sans-serif;
   font-size: 2.5vw;
 }
-
 .subScore {
   font-family: "Jua", sans-serif;
   font-size: 3vw;
   color: red;
 }
 
-.subWebtoonName,
-.subDate,
-.subScore {
-  padding-left: 2%;
+
+.container-3 {
+  display: flex;
+}
+/* 웹툰글자요소들을 그리드로 지정하여 세로로 보이도록함 */
+.container-4 {
+  display: grid;
+  margin-left: 3%;
 }
