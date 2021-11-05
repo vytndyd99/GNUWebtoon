@@ -8,9 +8,8 @@ body {
   /* 15:10:auto 비율로 배치 */
   grid-template-rows: 20% 5% auto;
   /* 중앙정렬 */
-  justify-content: center;
-  /* margin-left: 10%;
-  margin-right: 10%; */
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 /* container 안 header, nav, main 라인선 알기위한 border */
@@ -132,7 +131,7 @@ span > a:hover {
 .webtoon-author {
   font-family: "Gowun Batang", serif;
   color: #464444;
-  font-size: 2vw;
+  font-size: 2.5vw;
 }
 
 /* 웹툰내 인기웹툰인경우 up의 폰트정의 */
