@@ -59,15 +59,28 @@ body {
 .mainWebtoonExplanationBox > p {
   margin-top: 0;
   margin-bottom: 0;
+  /* 웹툰 설명 내용 줄넘김 방지 */
+  width: 100%;
+}
+
+.webtoonName {
+  padding-top: 5%;
 }
 
 .webtoonName,
 .webtoonAuthorDay,
 .webtoonScore {
   font-family: "Jua", sans-serif;
+  padding-left: 10%;
+}
+
+.webtoonName {
   font-size: 4vw;
-  padding-bottom: 10%;
-  padding-left: 5%;
+}
+
+.webtoonAuthorDay,
+.webtoonScore {
+  font-size: 3vw;
 }
 
 .webtoonScore {
@@ -86,11 +99,11 @@ body {
   color: black;
   padding: 5% 1.5%;
   text-align: center;
-  font-size: 2vw;
+  font-size: 3vw;
   font-family: "Jua", sans-serif;
   border: 0;
   outline: 0;
-  width: 15vw;
+  width: 30vw;
   height: auto;
   border: 1px solid black;
 }
