@@ -25,8 +25,9 @@
     <div class="header">
       <button onclick="history.back()" class="backButton">Back</button>
       <span>
-        <button class="favoriteButton">Favorite</button>
-        <button class="shareButton">Share</button>
+        <!-- 페이버릿 버튼 클릭시 하트모양 변경 -->
+        <button class="favoriteButton" onclick="favoriteHeartChange()">Favorite</button>
+        <span class="favoriteHeart">♡</span>
       </span>
     </div>
     <div class="container">
@@ -420,5 +421,7 @@
         </div>
       </article>
     </div>
+    <!-- 참교육 js -->
+    <script src="../js/mondayWebtoon_js/참교육.js"></script>
   </body>
 </html>

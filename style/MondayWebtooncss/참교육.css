@@ -39,7 +39,7 @@ body {
 }
 
 /* 관심, 공유버튼 꾸미기 */
-.favoriteButton, .shareButton {
+.favoriteButton, .favoriteHeart {
   display: inline;
   background-color: #a29bfe;
   color: black;
@@ -52,10 +52,6 @@ body {
   padding-bottom: 5%;
 }
 .favoriteButton:hover {
-  background-color: black;
-  color: white;
-}
-.shareButton:hover {
   background-color: black;
   color: white;
 }
@@ -123,6 +119,7 @@ body {
     right: 0;
 }
 
+/* 첫편부터보기 버튼 꾸미기 */
 .webtoonFirstStory {
   background-color: #a29bfe;
   color: black;
@@ -139,12 +136,6 @@ body {
   background-color: #343A40;
   color: white;
 }
-
-/* 첫편부터보기를 우측 하단에 두기위해 부모요소 container포지션을 변경 */
-/* header > div {
-  position: relative;
-  height: 100%;
-} */
 
 /* 웹툰화수 표현부분 */
 main > div {
@@ -199,7 +190,7 @@ article > div:nth-child(1) {
 .container-3 {
   display: flex;
 }
-/* 웹툰글자요소들을 그리드로 지정하여 세로로 보이도록함 */
+/* 웹툰Sub글자요소들을 그리드로 지정하여 세로로 보이도록함 */
 .container-4 {
   display: grid;
   margin-left: 3%;
